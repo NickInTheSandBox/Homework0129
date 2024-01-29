@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+ <div class="card"/>
+<img id="img1" src="http://www.travel.taipei/d_upload_ttn/sceneadmin/pic/11000848.jpg" class="card-img-top" alt="Card image cap">
+    <div class="card-body">
+      <h5 id = "title"class="card-title"></h5>
+      <p  id ="b"class="card-text"></p>
+      <p id="foooter" class="card-text"><small class="text-muted"></small></p>
+    </div>
+@section Scripts
+{
+    <script src="~/js/travel.js"></script>
+    <script>
+        $('#foooter').append(spots.CommonFormat.Section[0].xpostDate);
+        $('#title').append(spots.CommonFormat.Section[0].stitle);
+        $('#b').append(spots.CommonFormat.Section[0].xbody);
+    </script>
+}
